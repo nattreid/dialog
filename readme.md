@@ -10,3 +10,9 @@ class MyDialog extends NAttreid\Dialog\Dialog {
     }
 }
 ```
+
+```latte
+{extends $layout}
+{block content}
+    html ...
+```
