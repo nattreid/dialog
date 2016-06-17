@@ -1,0 +1,24 @@
+<div class="dialog-container" id="{$componentId}">
+    {snippet dialog}
+        {if $view}
+            <div class="dialog-background"></div>
+            <div class="dialog-box" data-fixed="{$fixed}">
+                <a class="dialog-close"></a>
+                {snippet dialogContent}
+                    {include content}
+                    <script type="text/javascript">
+                        function onload{$componentId|noescape}() {
+                            var rand = {rand(1, 5000)};
+                            {if $redrawOnResize}
+                                Dialog.redrawOnResize({$componentId});
+                            {else}
+                                Dialog.redraw({$componentId});
+                            {/if}
+                        }
+                        {onLoad onload$componentId}
+                    </script>
+                {/snippet}
+            </div>
+        {/if}
+    {/snippet}
+</div>
