@@ -1,6 +1,7 @@
 # Dialog pro Nette Framework
 
 ## Použití
+Vytvoříme potomka třídy *App/Components/Dialog*
 ```php
 class MyDialog extends NAttreid\Dialog\Dialog {
     public function render() {
@@ -11,6 +12,7 @@ class MyDialog extends NAttreid\Dialog\Dialog {
 }
 ```
 
+a v latte podědíme pomocí 
 ```latte
 {extends $layout}
 {block content}
