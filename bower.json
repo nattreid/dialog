@@ -1,5 +1,5 @@
 {
-    "name": "nattreid/dialog",
+    "name": "dialog",
     "description": "Dialog for Nette Framework",
     "license": ["Unlicense"],
     "authors": [
@@ -9,12 +9,11 @@
         }
     ],
     "main": [
-        "./client-side/dialog.min.js",
-        "./client-side/dialog.css"
+        "./client-side/src/dialog.js",
+        "./client-side/src/dialog.css"
     ],
     "ignore": [
-        "src",
-        "client-side/src",
+        "src/",
         "*.json"
     ],
     "dependencies": {
