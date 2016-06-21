@@ -9,11 +9,12 @@
         }
     ],
     "main": [
-        "./client-side/dialog.js",
-        "./client-side/dialog.less"
+        "./client-side/dialog.min.js",
+        "./client-side/dialog.css"
     ],
     "ignore": [
         "src",
+        "client-side/src",
         "*.json"
     ],
     "dependencies": {
