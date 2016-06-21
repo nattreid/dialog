@@ -8,12 +8,8 @@
             "email": "attreid@gmail.com"
         }
     ],
-    "main": [
-        "./client-side/src/dialog.js",
-        "./client-side/src/dialog.css"
-    ],
     "ignore": [
-        "src/",
+        "src",
         "*.json"
     ],
     "dependencies": {
