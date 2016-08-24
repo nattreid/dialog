@@ -8,9 +8,13 @@
             "email": "attreid@gmail.com"
         }
     ],
+    "main": [
+        "./assets/dialog.less",
+        "./assets/dialog.js"
+    ],
     "ignore": [
-        "src",
-        "*.json"
+        "/src",
+        "/composer.json"
     ],
     "dependencies": {
         "jquery": "~1.12",
