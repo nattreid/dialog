@@ -9,9 +9,16 @@ namespace NAttreid\Dialog;
  */
 abstract class Dialog extends \Nette\Application\UI\Control {
 
-    /** @persistent */
+    /**
+     * @var boolean
+     * @persistent
+     */
     public $view = FALSE;
+
+    /** @var boolean */
     private $fixed = FALSE;
+
+    /** @var boolean */
     private $redrawOnResize = TRUE;
 
     /**
