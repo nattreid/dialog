@@ -21,6 +21,14 @@ abstract class Dialog extends \Nette\Application\UI\Control {
     /** @var boolean */
     private $redrawOnResize = TRUE;
 
+    public function handleOpen() {
+        $this->open();
+    }
+
+    public function handleClose() {
+        $this->close();
+    }
+
     /**
      * Otevreni dialogu
      */
@@ -30,7 +38,7 @@ abstract class Dialog extends \Nette\Application\UI\Control {
     }
 
     /**
-     * Znovunacteni dilalogu
+     * Znovunacteni dialogu
      */
     public function refresh() {
         $this->view = TRUE;
@@ -53,7 +61,7 @@ abstract class Dialog extends \Nette\Application\UI\Control {
     }
 
     /**
-     * Nastave prekreslovani pri zmene rozliseni
+     * Nastavi prekreslovani pri zmene rozliseni
      * @param boolean $redraw
      */
     public function redrawOnResize($redraw = TRUE) {
