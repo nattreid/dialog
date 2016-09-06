@@ -1,24 +1,26 @@
 {
-    "name": "dialog",
-    "description": "Dialog for Nette Framework",
-    "license": ["Unlicense"],
-    "authors": [
-        {
-            "name": "Attreid",
-            "email": "attreid@gmail.com"
-        }
-    ],
-    "main": [
-        "./assets/dialog.less",
-        "./assets/dialog.js"
-    ],
-    "ignore": [
-        "/src",
-        "/composer.json"
-    ],
-    "dependencies": {
-        "jquery": "~1.12",
-        "font-awesome": "~4.6",
-        "utils": "git@git.newtravel.cz:nattreid/utils.git#~1.0"
+  "name": "dialog",
+  "description": "Dialog for Nette Framework",
+  "license": [
+    "Unlicense"
+  ],
+  "authors": [
+    {
+      "name": "Attreid",
+      "email": "attreid@gmail.com"
     }
+  ],
+  "main": [
+    "./assets/dialog.less",
+    "./assets/dialog.js"
+  ],
+  "ignore": [
+    "/src",
+    "/composer.json"
+  ],
+  "dependencies": {
+    "jquery": "~1.12",
+    "font-awesome": "~4.6",
+    "utils": "git@git.newtravel.cz:nattreid/utils.git#~1.0"
+  }
 }

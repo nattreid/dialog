@@ -10,9 +10,9 @@
                         function onload{$componentId|noescape}() {
                             var rand = {rand(1, 5000)};
                             {if $redrawOnResize}
-                                window.Dialog.redrawOnResize({$componentId});
+                            window.Dialog.redrawOnResize({$componentId});
                             {else}
-                                window.Dialog.redraw({$componentId});
+                            window.Dialog.redraw({$componentId});
                             {/if}
                         }
                         {onLoad onload$componentId}
