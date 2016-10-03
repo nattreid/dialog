@@ -16,13 +16,13 @@ abstract class Dialog extends Control
 	 * @var boolean
 	 * @persistent
 	 */
-	public $view = FALSE;
+	public $view = false;
 
 	/** @var boolean */
-	private $fixed = FALSE;
+	private $fixed = false;
 
 	/** @var boolean */
-	private $redrawOnResize = TRUE;
+	private $redrawOnResize = true;
 
 	public function handleOpen()
 	{
@@ -39,7 +39,7 @@ abstract class Dialog extends Control
 	 */
 	public function open()
 	{
-		$this->view = TRUE;
+		$this->view = true;
 		$this->redrawControl('dialog');
 	}
 
@@ -48,7 +48,7 @@ abstract class Dialog extends Control
 	 */
 	public function refresh()
 	{
-		$this->view = TRUE;
+		$this->view = true;
 		$this->redrawControl('dialogContent');
 	}
 
@@ -57,7 +57,7 @@ abstract class Dialog extends Control
 	 */
 	public function close()
 	{
-		$this->view = FALSE;
+		$this->view = false;
 		$this->redrawControl('dialog');
 	}
 
@@ -66,14 +66,14 @@ abstract class Dialog extends Control
 	 */
 	public function fixed()
 	{
-		$this->fixed = TRUE;
+		$this->fixed = true;
 	}
 
 	/**
 	 * Nastavi prekreslovani pri zmene rozliseni
 	 * @param boolean $redraw
 	 */
-	public function redrawOnResize($redraw = TRUE)
+	public function redrawOnResize($redraw = true)
 	{
 		$this->redrawOnResize = $redraw;
 	}
