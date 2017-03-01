@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace NAttreid\Dialog;
 
 use Nette\Application\UI\Control;
@@ -13,15 +15,15 @@ abstract class Dialog extends Control
 {
 
 	/**
-	 * @var boolean
+	 * @var bool
 	 * @persistent
 	 */
 	public $view = false;
 
-	/** @var boolean */
+	/** @var bool */
 	private $fixed = false;
 
-	/** @var boolean */
+	/** @var bool */
 	private $redrawOnResize = true;
 
 	public function handleOpen()
@@ -71,9 +73,9 @@ abstract class Dialog extends Control
 
 	/**
 	 * Nastavi prekreslovani pri zmene rozliseni
-	 * @param boolean $redraw
+	 * @param bool $redraw
 	 */
-	public function redrawOnResize($redraw = true)
+	public function redrawOnResize(bool $redraw = true)
 	{
 		$this->redrawOnResize = $redraw;
 	}
