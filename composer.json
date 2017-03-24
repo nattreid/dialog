@@ -3,7 +3,7 @@
   "description": "Dialog for Nette Framework",
   "type": "library",
   "license": [
-    "Unlicense"
+    "MIT"
   ],
   "authors": [
     {

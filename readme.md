@@ -1,7 +1,7 @@
 # Dialog pro Nette Framework
 
 ## Použití
-Vytvoříme potomka třídy *App/Components/Dialog*
+Vytvoříme potomka třídy *NAttreid\Dialog\Dialog*
 ```php
 class MyDialog extends NAttreid\Dialog\Dialog {
     public function render() {

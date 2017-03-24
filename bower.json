@@ -1,8 +1,8 @@
 {
-  "name": "dialog",
+  "name": "nattreid-dialog",
   "description": "Dialog for Nette Framework",
   "license": [
-    "Unlicense"
+    "MIT"
   ],
   "authors": [
     {
@@ -21,6 +21,6 @@
   "dependencies": {
     "jquery": "~1.12",
     "font-awesome": "~4.6",
-    "utils": "git@git.newtravel.cz:nattreid/utils.git#latest"
+    "nattreid-utils": "~1.0"
   }
 }
