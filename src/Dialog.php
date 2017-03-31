@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace NAttreid\Dialog;
 
@@ -18,7 +18,7 @@ abstract class Dialog extends Control
 	 * @var string
 	 * @persistent
 	 */
-	public $view = false;
+	public $view = null;
 
 	/** @var bool */
 	private $fixed = false;
@@ -41,7 +41,7 @@ abstract class Dialog extends Control
 	 */
 	public function open()
 	{
-		$this->view = true;
+		$this->view = 'true';
 		$this->redrawControl('dialog');
 	}
 
@@ -50,7 +50,7 @@ abstract class Dialog extends Control
 	 */
 	public function refresh()
 	{
-		$this->view = true;
+		$this->view = 'true';
 		$this->redrawControl('dialogContent');
 	}
 
@@ -59,7 +59,7 @@ abstract class Dialog extends Control
 	 */
 	public function close()
 	{
-		$this->view = false;
+		$this->view = null;
 		$this->redrawControl('dialog');
 	}
 
@@ -85,7 +85,7 @@ abstract class Dialog extends Control
 		$this->template->layout = __DIR__ . '/dialog.latte';
 		$this->template->componentId = $this->getUniqueId();
 
-		$this->template->view = $this->view;
+		$this->template->view = (bool) $this->view;
 		$this->template->fixed = $this->fixed;
 		$this->template->redrawOnResize = $this->redrawOnResize;
 
