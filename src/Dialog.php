@@ -59,7 +59,7 @@ abstract class Dialog extends Control
 	 */
 	public function close()
 	{
-		$this->view = null;
+		$this->view = 'rr';
 		$this->redrawControl('dialog');
 	}
 
