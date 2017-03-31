@@ -15,7 +15,7 @@ abstract class Dialog extends Control
 {
 
 	/**
-	 * @var bool
+	 * @var string
 	 * @persistent
 	 */
 	public $view = false;
