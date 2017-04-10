@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace NAttreid\Dialog;
 
 use Nette\Application\UI\Control;
+use Tracy\Debugger;
 
 /**
  * Dialog
@@ -59,7 +60,7 @@ abstract class Dialog extends Control
 	 */
 	public function close()
 	{
-		$this->view = 'rr';
+		$this->view = null;
 		$this->redrawControl('dialog');
 	}
 
