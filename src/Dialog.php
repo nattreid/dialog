@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace NAttreid\Dialog;
 
 use Nette\Application\UI\Control;
-use Tracy\Debugger;
 
 /**
  * Dialog
@@ -27,12 +26,12 @@ abstract class Dialog extends Control
 	/** @var bool */
 	private $redrawOnResize = true;
 
-	public function handleOpen()
+	public function handleOpen(): void
 	{
 		$this->open();
 	}
 
-	public function handleClose()
+	public function handleClose(): void
 	{
 		$this->close();
 	}
@@ -40,7 +39,7 @@ abstract class Dialog extends Control
 	/**
 	 * Otevreni dialogu
 	 */
-	public function open()
+	public function open(): void
 	{
 		$this->view = 'true';
 		$this->redrawControl('dialog');
@@ -49,7 +48,7 @@ abstract class Dialog extends Control
 	/**
 	 * Znovunacteni dialogu
 	 */
-	public function refresh()
+	public function refresh(): void
 	{
 		$this->view = 'true';
 		$this->redrawControl('dialogContent');
@@ -58,7 +57,7 @@ abstract class Dialog extends Control
 	/**
 	 * Zavreni dialogu
 	 */
-	public function close()
+	public function close(): void
 	{
 		$this->view = null;
 		$this->redrawControl('dialog');
@@ -67,7 +66,7 @@ abstract class Dialog extends Control
 	/**
 	 * Nastavi fixni zobrazeni
 	 */
-	public function fixed()
+	public function fixed(): void
 	{
 		$this->fixed = true;
 	}
@@ -76,12 +75,12 @@ abstract class Dialog extends Control
 	 * Nastavi prekreslovani pri zmene rozliseni
 	 * @param bool $redraw
 	 */
-	public function redrawOnResize(bool $redraw = true)
+	public function redrawOnResize(bool $redraw = true): void
 	{
 		$this->redrawOnResize = $redraw;
 	}
 
-	public function render()
+	public function render(): void
 	{
 		$this->template->layout = __DIR__ . '/dialog.latte';
 		$this->template->componentId = $this->getUniqueId();
