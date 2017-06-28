@@ -21,6 +21,7 @@
   "dependencies": {
     "jquery": "~3",
     "font-awesome": "~4",
-    "nattreid-utils": "~1"
+    "nattreid-utils": "~1",
+    "jquery-ui-draggable": "https://github.com/Kiri-rin/jquery-ui-draggable.git"
   }
 }
