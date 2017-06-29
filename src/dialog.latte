@@ -4,20 +4,20 @@
             <div class="dialog-background"></div>
             <div class="dialog-box" data-fixed="{$fixed}">
                 <span class="dialog-close"></span>
-                {snippet dialogContent}
+                <div class="dialog-content" n:snippet="dialogContent">
                     {include content}
                     <script type="text/javascript">
                         function onload{$componentId|noescape}() {
                             var rand = {rand(1, 5000)};
                             {if $redrawOnResize}
-                                window.Dialog.redrawOnResize({$componentId});
+                            window.Dialog.redrawOnResize({$componentId});
                             {else}
-                                window.Dialog.redraw({$componentId});
+                            window.Dialog.redraw({$componentId});
                             {/if}
                         }
                         {onLoad onload$componentId}
                     </script>
-                {/snippet}
+                </div>
             </div>
         {/if}
     {/snippet}

@@ -16,7 +16,9 @@
     window.Dialog.redraw = function (componentId) {
         var dialog = $('#' + componentId);
         var box = dialog.find('.dialog-box');
-        box.draggable();
+        box.draggable({
+            cancel: '.dialog-content'
+        });
         if (dialog.is(':visible')) {
             if (box.data('fixed')) {
                 box.centerFixed();
