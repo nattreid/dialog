@@ -13,6 +13,14 @@ use Nette\Application\UI\Control;
  */
 abstract class Dialog extends Control
 {
+	protected function attached($presenter)
+	{
+		parent::attached($presenter);
+		if ($this->view && !$this->presenter->isAjax()) {
+			unset($this->view);
+			$this->presenter->redirect('this');
+		}
+	}
 
 	/**
 	 * @var string
@@ -91,5 +99,4 @@ abstract class Dialog extends Control
 
 		$this->template->render();
 	}
-
 }
