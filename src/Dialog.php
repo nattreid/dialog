@@ -28,6 +28,9 @@ abstract class Dialog extends Control
 	 */
 	public $view = null;
 
+	/** @var callable[] */
+	public $onClose = [];
+
 	/** @var bool */
 	private $fixed = false;
 
@@ -68,6 +71,7 @@ abstract class Dialog extends Control
 	public function close(): void
 	{
 		$this->view = null;
+		$this->onClose();
 		$this->redrawControl('dialog');
 	}
 
@@ -96,6 +100,7 @@ abstract class Dialog extends Control
 		$this->template->view = (bool) $this->view;
 		$this->template->fixed = $this->fixed;
 		$this->template->redrawOnResize = $this->redrawOnResize;
+		$this->template->handleClose = !empty($this->onClose);
 
 		$this->template->render();
 	}

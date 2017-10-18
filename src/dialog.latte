@@ -1,4 +1,4 @@
-<div class="dialog-container" id="{$componentId}">
+<div class="dialog-container" id="{$componentId}"{if $handleClose} data-close="{link close!}"{/if}>
     {snippet dialog}
         {if $view}
             <div class="dialog-background"></div>

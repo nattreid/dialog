@@ -40,7 +40,11 @@
 
     $(document).ready(function () {
         $(document).on('click', '.dialog-container .dialog-background, .dialog-container .dialog-box .dialog-close, .dialog-container .dialog-box .close', function () {
-            $(this).closest('.dialog-container').fadeOut();
+            var container = $(this).closest('.dialog-container');
+            if (container.data('close')) {
+                $.nette.ajax(container.data('close'));
+            }
+            container.fadeOut();
             $(window).off('resize.dialogResize');
         });
     });
