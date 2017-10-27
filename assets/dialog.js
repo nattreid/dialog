@@ -41,8 +41,9 @@
     $(document).ready(function () {
         $(document).on('click', '.dialog-container .dialog-background, .dialog-container .dialog-box .dialog-close, .dialog-container .dialog-box .close', function () {
             var container = $(this).closest('.dialog-container');
-            if (container.data('close')) {
-                $.nette.ajax(container.data('close'));
+            var handler = container.find('.dialog-box span.dialog-close');
+            if (handler.data('close')) {
+                $.nette.ajax(handler.data('close'));
             }
             container.fadeOut();
             $(window).off('resize.dialogResize');

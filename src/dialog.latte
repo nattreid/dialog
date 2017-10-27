@@ -1,9 +1,9 @@
-<div class="dialog-container" id="{$componentId}"{if $handleClose} data-close="{link close!}"{/if}>
+<div class="dialog-container" id="{$componentId}">
     {snippet dialog}
         {if $view}
             <div class="dialog-background"></div>
             <div class="dialog-box" data-fixed="{$fixed}">
-                <span class="dialog-close"></span>
+                <span class="dialog-close"{if $handleClose} data-close="{link close!}"{/if}></span>
                 <div class="dialog-content" n:snippet="dialogContent">
                     {include content}
                     <script type="text/javascript">
