@@ -35,6 +35,9 @@ abstract class Dialog extends Control
 	private $fixed = false;
 
 	/** @var bool */
+	private $draggable = false;
+
+	/** @var bool */
 	private $redrawOnResize = true;
 
 	public function handleOpen(): void
@@ -45,6 +48,15 @@ abstract class Dialog extends Control
 	public function handleClose(): void
 	{
 		$this->close();
+	}
+
+	/**
+	 * Nastavi posouvatelnost okna
+	 * @param bool $draggeble
+	 */
+	public function setDraggable(bool $draggeble = true): void
+	{
+		$this->draggable = $draggeble;
 	}
 
 	/**
@@ -99,6 +111,7 @@ abstract class Dialog extends Control
 
 		$this->template->view = (bool) $this->view;
 		$this->template->fixed = $this->fixed;
+		$this->template->draggable = $this->draggable;
 		$this->template->redrawOnResize = $this->redrawOnResize;
 		$this->template->handleClose = !empty($this->onClose);
 

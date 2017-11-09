@@ -2,7 +2,7 @@
     {snippet dialog}
         {if $view}
             <div class="dialog-background"></div>
-            <div class="dialog-box" data-fixed="{$fixed}">
+            <div class="dialog-box" data-fixed="{$fixed}" data-draggable="{$draggable}">
                 <span class="dialog-close"></span>
                 <div class="dialog-content" n:snippet="dialogContent">
                     {include content}
