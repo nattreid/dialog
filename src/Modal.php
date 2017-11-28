@@ -11,7 +11,7 @@ use Nette\Application\UI\Control;
  *
  * @author Attreid <attreid@gmail.com>
  */
-abstract class Dialog extends Control
+abstract class Modal extends Control
 {
 	protected function attached($presenter)
 	{
@@ -60,31 +60,31 @@ abstract class Dialog extends Control
 	}
 
 	/**
-	 * Otevreni dialogu
+	 * Otevreni modalu
 	 */
 	public function open(): void
 	{
 		$this->view = 'true';
-		$this->redrawControl('dialog');
+		$this->redrawControl('modal');
 	}
 
 	/**
-	 * Znovunacteni dialogu
+	 * Znovunacteni modalu
 	 */
 	public function refresh(): void
 	{
 		$this->view = 'true';
-		$this->redrawControl('dialogContent');
+		$this->redrawControl('modalContent');
 	}
 
 	/**
-	 * Zavreni dialogu
+	 * Zavreni modalu
 	 */
 	public function close(): void
 	{
 		$this->view = null;
 		$this->onClose();
-		$this->redrawControl('dialog');
+		$this->redrawControl('modal');
 	}
 
 	/**
@@ -106,7 +106,7 @@ abstract class Dialog extends Control
 
 	public function render(): void
 	{
-		$this->template->layout = __DIR__ . '/dialog.latte';
+		$this->template->layout = __DIR__ . '/modal.latte';
 		$this->template->componentId = $this->getUniqueId();
 
 		$this->template->view = (bool) $this->view;

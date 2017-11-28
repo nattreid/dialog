@@ -1,6 +1,6 @@
 {
-  "name": "nattreid/dialog",
-  "description": "Dialog for Nette Framework",
+  "name": "nattreid/modal",
+  "description": "Modal for Nette Framework",
   "type": "library",
   "license": [
     "MIT"

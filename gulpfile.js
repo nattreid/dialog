@@ -7,14 +7,14 @@ var gulp = require('gulp'),
 var path = './assets/';
 
 gulp.task('js', function () {
-    return gulp.src(path + 'dialog.js')
+    return gulp.src(path + 'modal.js')
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest(path));
 });
 
 gulp.task('less', function () {
-    return gulp.src(path + 'dialog.less')
+    return gulp.src(path + 'modal.less')
         .pipe(rename({suffix: '.min'}))
         .pipe(less())
         .pipe(minify({keepSpecialComments: 0}))
@@ -22,8 +22,8 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(path + 'dialog.js', ['js']);
-    gulp.watch(path + 'dialog.less', ['less']);
+    gulp.watch(path + 'modal.js', ['js']);
+    gulp.watch(path + 'modal.less', ['less']);
 });
 
 gulp.task('default', ['js', 'less', 'watch']); 

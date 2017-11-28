@@ -1,10 +1,10 @@
 {
-  "name": "nattreid-dialog",
-  "description": "Dialog for Nette Framework",
+  "name": "nattreid-modal",
+  "description": "Modal for Nette Framework",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nattreid/dialog.git"
+    "url": "git@github.com:nattreid/modal.git"
   },
   "author": "Attreid",
   "license": "MIT",

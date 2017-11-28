@@ -1,9 +1,9 @@
-# Dialog pro Nette Framework
+# Modal pro Nette Framework
 
 ## Použití
-Vytvoříme potomka třídy *NAttreid\Dialog\Dialog*
+Vytvoříme potomka třídy *NAttreid\Modal\Modal*
 ```php
-class MyDialog extends NAttreid\Dialog\Dialog {
+class MyModal extends NAttreid\Modal\Modal {
     public function render() {
         $template = $this->template;
         $template->setFile(__DIR__ . '/default.latte');
