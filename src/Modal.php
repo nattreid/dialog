@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NAttreid\Dialog;
+namespace NAttreid\Modal;
 
 use Nette\Application\UI\Control;
 
