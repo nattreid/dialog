@@ -1,10 +1,10 @@
-<div class="modal-container" id="{$componentId}">
+<div class="nattreid-modal-container" id="{$componentId}">
     {snippet modal}
         {if $view}
-            <div class="modal-background"></div>
-            <div class="modal-box" data-fixed="{$fixed}" data-draggable="{$draggable}">
-                <span class="modal-close"{if $handleClose} data-close="{link close!}"{/if}></span>
-                <div class="modal-content" n:snippet="modalContent">
+            <div class="nattreid-modal-background"></div>
+            <div class="nattreid-modal-wrapper" data-fixed="{$fixed}" data-draggable="{$draggable}">
+                <span class="nattreid-modal-close"{if $handleClose} data-close="{link close!}"{/if}></span>
+                <div class="nattreid-modal-content" n:snippet="modalContent">
                     {include content}
                     <script type="text/javascript">
                         function onload{$componentId|noescape}() {

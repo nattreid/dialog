@@ -15,10 +15,10 @@
 
     window.Modal.redraw = function (componentId) {
         var modal = $('#' + componentId);
-        var box = modal.find('.modal-box');
+        var box = modal.find('.nattreid-modal-wrapper');
         if (box.data('draggable')) {
             box.draggable({
-                cancel: '.modal-content'
+                cancel: '.nattreid-modal-content'
             });
         }
         if (modal.is(':visible')) {
@@ -41,9 +41,9 @@
     };
 
     $(document).ready(function () {
-        $(document).on('click', '.modal-container .modal-background, .modal-container .modal-box .modal-close, .modal-container .modal-box .close', function () {
-            var container = $(this).closest('.modal-container');
-            var handler = container.find('.modal-box span.modal-close');
+        $(document).on('click', '.nattreid-modal-container .nattreid-modal-background, .nattreid-modal-container .nattreid-modal-wrapper .nattreid-modal-close, .nattreid-modal-container .nattreid-modal-wrapper .close', function () {
+            var container = $(this).closest('.nattreid-modal-container');
+            var handler = container.find('.nattreid-modal-wrapper span.nattreid-modal-close');
             if (handler.data('close')) {
                 $.nette.ajax(handler.data('close'));
             }
