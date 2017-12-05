@@ -13,6 +13,10 @@ use Nette\Application\UI\Control;
  */
 abstract class Modal extends Control
 {
+	/**
+	 * @param $presenter
+	 * @throws \Nette\Application\AbortException
+	 */
 	protected function attached($presenter)
 	{
 		parent::attached($presenter);
