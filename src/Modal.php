@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NAttreid\Modal;
 
+use NAttreid\Utils\Strings;
 use Nette\Application\UI\Control;
 
 /**
@@ -111,7 +112,9 @@ abstract class Modal extends Control
 	public function render(): void
 	{
 		$this->template->layout = __DIR__ . '/modal.latte';
-		$this->template->componentId = $this->getUniqueId();
+		$componentId = $this->getUniqueId();
+		$this->template->componentId = $componentId;
+		$this->template->functionName = str_replace('-', '_', $componentId);
 
 		$this->template->view = (bool) $this->view;
 		$this->template->fixed = $this->fixed;

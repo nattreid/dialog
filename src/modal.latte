@@ -7,7 +7,7 @@
                 <div class="nattreid-modal-content" n:snippet="modalContent">
                     {include content}
                     <script type="text/javascript">
-                        function onload{$componentId|noescape}() {
+                        function onload{$functionName|noescape}() {
                             var rand = {rand(1, 5000)};
                             {if $redrawOnResize}
                             window.Modal.redrawOnResize({$componentId});
@@ -15,7 +15,7 @@
                             window.Modal.redraw({$componentId});
                             {/if}
                         }
-                        {onLoad onload$componentId}
+                        {onLoad onload$functionName}
                     </script>
                 </div>
             </div>
