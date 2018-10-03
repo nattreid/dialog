@@ -1,7 +1,7 @@
 {
   "name": "nattreid-modal",
   "description": "Modal for Nette Framework",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "main": "./assets/modal.js",
   "repository": {
 	"type": "git",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
 	"jquery": "~3",
-	"jquery-ui": "~1",
+	"jquery-ui-dist": "~1",
 	"font-awesome": "~4",
 	"nattreid-utils": "~1"
   },
