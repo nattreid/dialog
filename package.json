@@ -14,9 +14,9 @@
   "license": "MIT",
   "dependencies": {
 	"jquery": "~3",
+	"jquery-ui": "~1",
 	"font-awesome": "~4",
-	"nattreid-utils": "~1",
-	"jquery-ui-draggable": "~1"
+	"nattreid-utils": "~1"
   },
   "devDependencies": {
 	"gulp": "~4",

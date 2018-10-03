@@ -22,8 +22,8 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(path + 'modal.js', ['js']);
-    gulp.watch(path + 'modal.less', ['less']);
+    gulp.watch(path + 'modal.js', gulp.series('js'));
+    gulp.watch(path + 'modal.less', gulp.series('less'));
 });
 
-gulp.task('default', ['js', 'less', 'watch']); 
+gulp.task('default', gulp.series('js', 'less', 'watch'));
