@@ -1,7 +1,7 @@
 {
   "name": "nattreid-modal",
   "description": "Modal for Nette Framework",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "./assets/modal.js",
   "repository": {
 	"type": "git",
