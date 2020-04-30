@@ -1,28 +1,28 @@
 {
-  "name": "nattreid-modal",
-  "description": "Modal for Nette Framework",
-  "version": "2.1.5",
-  "main": "./assets/modal.js",
-  "repository": {
-	"type": "git",
-	"url": "git@github.com:nattreid/modal.git"
-  },
-  "author": {
-	"name": "Attreid",
-	"email": "attreid@gmail.com"
-  },
-  "license": "MIT",
-  "dependencies": {
-	"font-awesome": "~4.7",
-	"jquery": "~3.4",
-	"jquery-ui-dist": "~1.12",
-	"nattreid-utils": "^1.6.2"
-  },
-  "devDependencies": {
-	"gulp": "^4.0.1",
-	"gulp-clean-css": "~3.10",
-	"gulp-less": "~4.0",
-	"gulp-rename": "~1.4",
-	"gulp-uglify": "^3.0.2"
-  }
+ "name": "nattreid-modal",
+ "description": "Modal for Nette Framework",
+ "version": "2.1.6",
+ "main": "./assets/modal.js",
+ "repository": {
+  "type": "git",
+  "url": "git@github.com:nattreid/modal.git"
+ },
+ "author": {
+  "name": "Attreid",
+  "email": "attreid@gmail.com"
+ },
+ "license": "MIT",
+ "dependencies": {
+  "font-awesome": "~4.7",
+  "jquery": "~3.5",
+  "jquery-ui-dist": "~1.12",
+  "nattreid-utils": "^1.6.2"
+ },
+ "devDependencies": {
+  "gulp": "^4.0.1",
+  "gulp-clean-css": "~3.10",
+  "gulp-less": "~4.0",
+  "gulp-rename": "~1.4",
+  "gulp-uglify": "^3.0.2"
+ }
 }
